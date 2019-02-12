@@ -13,6 +13,7 @@ public class dynamicDropdown {
 		Thread.sleep(2000);
 		//driver.findElement(By.xpath("(//a[@value='MAA'])[2]")).click();
 		driver.findElement(By.xpath("(//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR']) //a[@value='MAA']")).click();
+		
 	}
 
 }
