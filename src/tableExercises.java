@@ -20,12 +20,22 @@ public class tableExercises {
 			int valueInteger =Integer.parseInt(value);
 			sum =sum+valueInteger;
 		}
-			System.out.println(sum);
+			//System.out.println(sum);
 			String extras =(driver.findElement(By.xpath("//div[text()='Extras']/following-sibling::div")).getText());
 			int extrasInteger = Integer.parseInt(extras);
 			int Totalsum =sum+extrasInteger;
 			System.out.println(Totalsum);
-			System.out.println(driver.findElement(By.xpath("//div[text()='Total']/following-sibling::div")).getText());
+			//System.out.println(driver.findElement(By.xpath("//div[text()='Total']/following-sibling::div")).getText());
+			String actualTotal =driver.findElement(By.xpath("//div[text()='Total']/following-sibling::div")).getText();
+			int actualTotalValue =Integer.parseInt(actualTotal);
+			if(Totalsum == actualTotalValue) 
+			{
+				System.out.println("Count Matches");
+			}
+			else 
+			{
+				System.out.println("Count doesn't Match");
+			}
 	}
 
 }
